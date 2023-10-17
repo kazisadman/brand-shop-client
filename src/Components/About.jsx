@@ -8,7 +8,7 @@ const About = () => {
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold text-[#FF7A00]">About Us</h1>
             <p className="py-6">
-              Welcome to Careps! With 20 years in the
+              Welcome to Careos! With 20 years in the
               industry, we offer a curated selection of top-tier vehicles.
               We&apos;re more than a dealership - we&apos;re a community of
               enthusiasts. Our personalized service ensures a seamless

@@ -1,0 +1,62 @@
+[
+  {
+    "brand_name": "Toyota",
+    "brand_image": "https://i.ibb.co/zHpQdTW/Toyota-EU-1.png",
+    "car_name": "Toyota Camry",
+    "car_image": "camry.jpg",
+    "body_type": "Sedan",
+    "price": "$25,000",
+    "short_description": "The Toyota Camry is a reliable and fuel-efficient sedan.",
+    "rating": 4.5
+  },
+  {
+    "brand_name": "Honda",
+    "brand_image": "https://i.ibb.co/qrwRHys/Group.png",
+    "car_name": "Honda Civic",
+    "car_image": "civic.jpg",
+    "body_type": "Sedan",
+    "price": "$23,000",
+    "short_description": "The Honda Civic is a popular compact sedan known for its agility.",
+    "rating": 4.3
+  },
+  {
+    "brand_name": "Ford",
+    "brand_image": "https://i.ibb.co/LNd8NKQ/Ford-logo-flat.png",
+    "car_name": "Ford Mustang",
+    "car_image": "mustang.jpg",
+    "body_type": "Sports Car",
+    "price": "$40,000",
+    "short_description": "The Ford Mustang is an iconic American muscle car with powerful performance.",
+    "rating": 4.8
+  },
+  {
+    "brand_name": "Chevrolet",
+    "brand_image": "https://i.ibb.co/1TNwnvh/Chevrolet-1.png",
+    "car_name": "Chevrolet Corvette",
+    "car_image": "corvette.jpg",
+    "body_type": "Sports Car",
+    "price": "$60,000",
+    "short_description": "The Chevrolet Corvette is a legendary sports car with stunning design and speed.",
+    "rating": 4.7
+  },
+  {
+    "brand_name": "BMW",
+    "brand_image": "https://i.ibb.co/b3jW2DN/BMW.png",
+    "car_name": "BMW 3 Series",
+    "car_image": "3_series.jpg",
+    "body_type": "Sedan",
+    "price": "$35,000",
+    "short_description": "The BMW 3 Series is a luxury sedan known for its performance and comfort.",
+    "rating": 4.6
+  },
+  {
+    "brand_name": "Mercedes",
+    "brand_image": "https://i.ibb.co/fptGrZW/Mercedes-Benz-free-logo.png",
+    "car_name": "Mercedes-Benz C-Class",
+    "car_image": "c_class.jpg",
+    "body_type": "Sedan",
+    "price": "$38,000",
+    "short_description": "The Mercedes-Benz C-Class offers a blend of luxury and cutting-edge technology.",
+    "rating": 4.9
+  }
+]

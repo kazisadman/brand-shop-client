@@ -1,7 +1,11 @@
+import Productbanner from "../Components/Productbanner";
+import Products from "../Components/Products";
+
 const Productspage = () => {
   return (
     <div>
-      <h1>this is product page</h1>
+      <Productbanner></Productbanner>
+      <Products></Products>
     </div>
   );
 };

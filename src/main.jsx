@@ -6,6 +6,8 @@ import Router from "./Router/Router";
 import Home from "./Pages/Home";
 import Addproduct from "./Pages/Addproduct";
 import Productspage from "./Pages/Productspage";
+import Productdetail from "./Pages/Productdetail";
+import Updateproduct from "./Pages/Updateproduct";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,17 @@ const router = createBrowserRouter([
         element: <Addproduct></Addproduct>,
       },
       {
+        path: "/:brand/:name/update",
+        element: <Updateproduct></Updateproduct>,
+      },
+      {
         path: "/:brand",
         element: <Productspage></Productspage>,
+        loader: () => fetch("/cars.json"),
+      },
+      {
+        path: "/:brand/:name",
+        element: <Productdetail></Productdetail>,
         loader: () => fetch("/cars.json"),
       },
     ],

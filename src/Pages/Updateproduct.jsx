@@ -19,6 +19,7 @@ const Updateproduct = () => {
       rating,
     };
 
+    console.log(newCar);
     e.target.reset();
   };
 

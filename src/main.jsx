@@ -8,6 +8,7 @@ import Addproduct from "./Pages/Addproduct";
 import Productspage from "./Pages/Productspage";
 import Productdetail from "./Pages/Productdetail";
 import Updateproduct from "./Pages/Updateproduct";
+import Cart from "./Pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
         path: "/:brand/:name",
         element: <Productdetail></Productdetail>,
         loader: () => fetch("/cars.json"),
+      },
+      {
+        path: "cart",
+        element: <Cart></Cart>,
+        loader: () => fetch("/cart.json"),
       },
     ],
   },

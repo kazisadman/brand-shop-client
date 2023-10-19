@@ -18,10 +18,23 @@ const Productdetail = () => {
 
   const handleCart = () => {
     const cartToast = document.getElementById("cart");
-    cartToast.classList.remove("hidden");
-    setTimeout(() => {
-      cartToast.classList.add("hidden");
-    }, 3000);
+
+    fetch("http://localhost:5000/cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(car),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          cartToast.classList.remove("hidden");
+          setTimeout(() => {
+            cartToast.classList.add("hidden");
+          }, 3000);
+        }
+      });
   };
 
   const { car_name, car_image, body_type, price, short_description, rating } =

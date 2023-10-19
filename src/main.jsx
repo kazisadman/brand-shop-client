@@ -9,6 +9,9 @@ import Productspage from "./Pages/Productspage";
 import Productdetail from "./Pages/Productdetail";
 import Updateproduct from "./Pages/Updateproduct";
 import Cart from "./Pages/Cart";
+import Authcontext from "./Context/Authcontext";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -20,17 +23,27 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
+      },
+      {
         path: "addproduct",
         element: <Addproduct></Addproduct>,
       },
       {
-        path: "/:brand/:name/update",
+        path: "/update/:id",
         element: <Updateproduct></Updateproduct>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/cars/${params.id}`),
       },
       {
         path: "/:brand",
         element: <Productspage></Productspage>,
-        loader: () => fetch("/cars.json"),
+        loader: () => fetch("http://localhost:5000/cars"),
       },
       {
         path: "/:brand/:name",
@@ -40,7 +53,7 @@ const router = createBrowserRouter([
       {
         path: "cart",
         element: <Cart></Cart>,
-        loader: () => fetch("/cart.json"),
+        loader: () => fetch("http://localhost:5000/cart"),
       },
     ],
   },
@@ -48,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <Authcontext>
+      <RouterProvider router={router}></RouterProvider>
+    </Authcontext>
   </React.StrictMode>
 );

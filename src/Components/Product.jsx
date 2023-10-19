@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Product = ({ car }) => {
   const {
+    _id,
     brand_name,
     car_name,
     car_image,
@@ -37,7 +38,7 @@ const Product = ({ car }) => {
             </div>
           </div>
           <div className="card-actions justify-between">
-            <Link to={`/${brand_name}/${car_name}/update`}>
+            <Link to={`/update/${_id}`}>
               <button className="btn btn-primary">Update</button>
             </Link>
             <Link to={`/${brand_name}/${car_name}`}>

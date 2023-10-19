@@ -4,6 +4,7 @@ import { ImPriceTag } from "react-icons/im";
 
 const Cartcard = ({ addedcar }) => {
   const {
+    _id,
     car_name,
     car_image,
     body_type,
@@ -11,6 +12,15 @@ const Cartcard = ({ addedcar }) => {
     short_description,
     rating,
   } = addedcar;
+
+  const handleCartDelet = () => {
+    console.log(_id);
+    fetch(`http://localhost:5000/cart/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
   return (
     <div>
@@ -36,7 +46,9 @@ const Cartcard = ({ addedcar }) => {
             </div>
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">delete</button>
+            <button onClick={handleCartDelet} className="btn btn-primary">
+              delete
+            </button>
           </div>{" "}
         </div>
       </div>

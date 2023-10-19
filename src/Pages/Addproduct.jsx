@@ -2,25 +2,35 @@ const Addproduct = () => {
   const handleCarAdd = (e) => {
     e.preventDefault();
     const form = e.target;
-    const brandName = form.brand.value;
-    const product = form.product.value;
-    const photo = form.photo.value;
-    const body = form.body.value;
+    const brand_name = form.brand.value;
+    const car_name = form.product.value;
+    const car_image = form.photo.value;
+    const body_type = form.body.value;
     const price = form.price.value;
-    const discription = form.discription.value;
+    const short_description = form.discription.value;
     const rating = form.rating.value;
     const newCar = {
-      brandName,
-      product,
-      photo,
-      body,
+      brand_name,
+      car_name,
+      car_image,
+      body_type,
       price,
-      discription,
+      short_description,
       rating,
     };
 
+    fetch("http://localhost:5000/cars", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newCar),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
     console.log(newCar);
-    e.target.reset()
+    e.target.reset();
   };
 
   return (

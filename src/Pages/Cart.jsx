@@ -5,10 +5,9 @@ const Cart = () => {
   const addedCars = useLoaderData();
   return (
     <div>
-      <h1>this is cart page</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {addedCars.map((addedcar) => (
-          <Cartcard key={addedcar.brand_name} addedcar={addedcar}></Cartcard>
+          <Cartcard key={addedcar._id} addedcar={addedcar}></Cartcard>
         ))}
       </div>
     </div>

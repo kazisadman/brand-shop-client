@@ -1,5 +1,5 @@
 import logo from "../assets/Logo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLinks = (
@@ -49,7 +49,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn bg-[#FF7A00] text-white">Login</button>
+        <Link to={"login"}>
+          <button className="btn bg-[#FF7A00] text-white">Login</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,25 +1,49 @@
+import { useLoaderData } from "react-router-dom";
+
 const Updateproduct = () => {
+  const carsData = useLoaderData();
+  const {
+    _id,
+    brand_name,
+    car_name,
+    car_image,
+    body_type,
+    price,
+    short_description,
+    rating,
+  } = carsData;
+
   const handleCarUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
-    const brandName = form.brand.value;
-    const product = form.product.value;
-    const photo = form.photo.value;
-    const body = form.body.value;
+    const brand_name = form.brand.value;
+    const car_name = form.product.value;
+    const car_image = form.photo.value;
+    const body_type = form.body.value;
     const price = form.price.value;
-    const discription = form.discription.value;
+    const short_description = form.discription.value;
     const rating = form.rating.value;
-    const newCar = {
-      brandName,
-      product,
-      photo,
-      body,
+    const updatedCar = {
+      brand_name,
+      car_name,
+      car_image,
+      body_type,
       price,
-      discription,
+      short_description,
       rating,
     };
 
-    console.log(newCar);
+    fetch(`http://localhost:5000/cars/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedCar),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
+    console.log(updatedCar);
     e.target.reset();
   };
 
@@ -41,6 +65,7 @@ const Updateproduct = () => {
                   name="brand"
                   placeholder="Brand Name"
                   className="input input-bordered"
+                  defaultValue={brand_name}
                   required
                 />
               </div>
@@ -53,6 +78,7 @@ const Updateproduct = () => {
                   name="product"
                   placeholder="Product Name"
                   className="input input-bordered"
+                  defaultValue={car_name}
                   required
                 />
               </div>
@@ -65,6 +91,7 @@ const Updateproduct = () => {
                   name="photo"
                   placeholder="Photo URL"
                   className="input input-bordered"
+                  defaultValue={car_image}
                   required
                 />
               </div>
@@ -77,6 +104,7 @@ const Updateproduct = () => {
                   name="body"
                   placeholder="Body Type"
                   className="input input-bordered"
+                  defaultValue={body_type}
                   required
                 />
               </div>
@@ -89,6 +117,7 @@ const Updateproduct = () => {
                   name="price"
                   placeholder="Price"
                   className="input input-bordered"
+                  defaultValue={price}
                   required
                 />
               </div>
@@ -101,6 +130,7 @@ const Updateproduct = () => {
                   name="discription"
                   placeholder="Short discription"
                   className="input input-bordered"
+                  defaultValue={short_description}
                   required
                 />
               </div>
@@ -113,6 +143,7 @@ const Updateproduct = () => {
                   name="rating"
                   placeholder="Rating"
                   className="input input-bordered"
+                  defaultValue={rating}
                   required
                 />
               </div>

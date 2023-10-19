@@ -1,12 +1,30 @@
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Authcontextprovider } from "../Context/Authcontext";
 
 const Loginform = () => {
+  const { userLogin } = useContext(Authcontextprovider);
+  const [error, setError] = useState("");
+
   const handleLogin = (e) => {
+    setError("");
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    userLogin(email, password)
+      .then((user) => {
+        console.log(user);
+        const toast = document.getElementById("login");
+        toast.classList.remove("hidden");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 3000);
+      })
+      .catch((err) => setError(err));
+
+    e.target.reset();
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -42,16 +60,25 @@ const Loginform = () => {
               <label className="label">
                 <h3 className="label-text-alt">
                   Don&apos;t have an account?{" "}
-                  <Link to={'/register'} className="label-text-alt link link-hover">
+                  <Link
+                    to={"/register"}
+                    className="label-text-alt link link-hover"
+                  >
                     Register
                   </Link>
                 </h3>
               </label>
             </div>
+            {error && <h2>Please check email or password</h2>}
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
           </form>
+        </div>
+      </div>
+      <div id="login" className="toast hidden">
+        <div className="alert alert-info ">
+          <span>Logged in successfully</span>
         </div>
       </div>
     </div>

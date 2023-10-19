@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 import { Authcontextprovider } from "../Context/Authcontext";
 
 const Loginform = () => {
-  const { userLogin } = useContext(Authcontextprovider);
+  const { userLogin, userGoogle } = useContext(Authcontextprovider);
   const [error, setError] = useState("");
+  const nav = useNavigate();
 
   const handleLogin = (e) => {
     setError("");
@@ -21,10 +23,20 @@ const Loginform = () => {
         setTimeout(() => {
           toast.classList.add("hidden");
         }, 3000);
+        nav("/home");
       })
       .catch((err) => setError(err));
 
     e.target.reset();
+  };
+
+  const handleGoogleLogin = () => {
+    userGoogle()
+      .then((result) => {
+        console.log(result);
+        nav("/home");
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -72,6 +84,11 @@ const Loginform = () => {
             {error && <h2>Please check email or password</h2>}
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
+            </div>
+            <div className="flex justify-center">
+              <button onClick={handleGoogleLogin}>
+                <FcGoogle className="text-2xl"></FcGoogle>
+              </button>
             </div>
           </form>
         </div>

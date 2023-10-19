@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontextprovider } from "../Context/Authcontext";
 
 const Registerform = () => {
   const { userRegister } = useContext(Authcontextprovider);
   const [error, setError] = useState(null);
+  const nav = useNavigate()
 
   const handleRegister = (e) => {
     setError("");
@@ -29,6 +30,7 @@ const Registerform = () => {
           setTimeout(() => {
             toast.classList.add("hidden");
           }, 3000);
+          nav('/home')
         })
         .catch((err) => {
           setError("This email is already in use");

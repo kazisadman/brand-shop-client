@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import logo from "../assets/Logo.png";
 import { Link, NavLink } from "react-router-dom";
+import { Authcontextprovider } from "../Context/Authcontext";
+import { BiUserCircle } from "react-icons/bi";
 
 const Navbar = () => {
+  const { userLogout, user } = useContext(Authcontextprovider);
   const navLinks = (
     <>
       <li>
@@ -15,6 +19,10 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogout = () => {
+    userLogout();
+  };
 
   return (
     <div className="navbar bg-base-100">
@@ -49,9 +57,30 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to={"login"}>
-          <button className="btn bg-[#FF7A00] text-white">Login</button>
-        </Link>
+        <div className="flex gap-2 items-center">
+          {user?.displayName && <h2>{user.displayName}</h2>}
+          {user?.photoURL ? (
+            <div className="avatar">
+              <div className="w-8 rounded-full">
+                <img src={user.photoURL} />
+              </div>
+            </div>
+          ) : (
+            <BiUserCircle className="text-4xl"></BiUserCircle>
+          )}
+        </div>
+        {!user ? (
+          <Link to={"login"}>
+            <button className="btn bg-[#FF7A00] text-white">Login</button>
+          </Link>
+        ) : (
+          <button
+            onClick={handleLogout}
+            className="btn bg-[#FF7A00] text-white"
+          >
+            logout
+          </button>
+        )}
       </div>
     </div>
   );

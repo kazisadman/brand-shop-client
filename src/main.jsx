@@ -12,6 +12,7 @@ import Cart from "./Pages/Cart";
 import Authcontext from "./Context/Authcontext";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Priveteroute from "./Private/Priveteroute";
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,19 @@ const router = createBrowserRouter([
       },
       {
         path: "addproduct",
-        element: <Addproduct></Addproduct>,
+        element: (
+          <Priveteroute>
+            <Addproduct></Addproduct>
+          </Priveteroute>
+        ),
       },
       {
         path: "/update/:id",
-        element: <Updateproduct></Updateproduct>,
+        element: (
+          <Priveteroute>
+            <Updateproduct></Updateproduct>
+          </Priveteroute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/cars/${params.id}`),
       },
@@ -52,7 +61,11 @@ const router = createBrowserRouter([
       },
       {
         path: "cart",
-        element: <Cart></Cart>,
+        element: (
+          <Priveteroute>
+            <Cart></Cart>
+          </Priveteroute>
+        ),
         loader: () => fetch("http://localhost:5000/cart"),
       },
     ],

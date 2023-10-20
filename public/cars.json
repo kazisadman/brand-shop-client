@@ -1,7 +1,7 @@
 [
   {
-    "brand_name": "Toyota",
-    "brand_image": "https://i.ibb.co/zHpQdTW/Toyota-EU-1.png",
+    "brand": "Toyota",
+    "brand_image": "toyota_logo.png",
     "car_name": "Toyota Camry",
     "car_image": "camry.jpg",
     "body_type": "Sedan",
@@ -10,8 +10,38 @@
     "rating": 4.5
   },
   {
-    "brand_name": "Honda",
-    "brand_image": "https://i.ibb.co/qrwRHys/Group.png",
+    "brand": "Toyota",
+    "brand_image": "toyota_logo.png",
+    "car_name": "Toyota RAV4",
+    "car_image": "rav4.jpg",
+    "body_type": "SUV",
+    "price": "$27,000",
+    "short_description": "The Toyota RAV4 is a versatile and spacious SUV with excellent fuel efficiency.",
+    "rating": 4.4
+  },
+  {
+    "brand": "Toyota",
+    "brand_image": "toyota_logo.png",
+    "car_name": "Toyota Prius",
+    "car_image": "prius.jpg",
+    "body_type": "Hatchback",
+    "price": "$24,000",
+    "short_description": "The Toyota Prius is a hybrid hatchback known for its outstanding fuel economy.",
+    "rating": 4.7
+  },
+  {
+    "brand": "Toyota",
+    "brand_image": "toyota_logo.png",
+    "car_name": "Toyota Highlander",
+    "car_image": "highlander.jpg",
+    "body_type": "SUV",
+    "price": "$32,000",
+    "short_description": "The Toyota Highlander is a family-friendly SUV with ample space and advanced safety features.",
+    "rating": 4.6
+  },
+  {
+    "brand": "Honda",
+    "brand_image": "honda_logo.png",
     "car_name": "Honda Civic",
     "car_image": "civic.jpg",
     "body_type": "Sedan",
@@ -20,8 +50,38 @@
     "rating": 4.3
   },
   {
-    "brand_name": "Ford",
-    "brand_image": "https://i.ibb.co/LNd8NKQ/Ford-logo-flat.png",
+    "brand": "Honda",
+    "brand_image": "honda_logo.png",
+    "car_name": "Honda CR-V",
+    "car_image": "crv.jpg",
+    "body_type": "SUV",
+    "price": "$26,000",
+    "short_description": "The Honda CR-V is a comfortable and reliable SUV with great cargo space.",
+    "rating": 4.5
+  },
+  {
+    "brand": "Honda",
+    "brand_image": "honda_logo.png",
+    "car_name": "Honda Accord",
+    "car_image": "accord.jpg",
+    "body_type": "Sedan",
+    "price": "$27,000",
+    "short_description": "The Honda Accord is a spacious and well-equipped sedan with a reputation for reliability.",
+    "rating": 4.4
+  },
+  {
+    "brand": "Honda",
+    "brand_image": "honda_logo.png",
+    "car_name": "Honda Fit",
+    "car_image": "fit.jpg",
+    "body_type": "Hatchback",
+    "price": "$17,000",
+    "short_description": "The Honda Fit is a compact hatchback known for its versatility and fuel efficiency.",
+    "rating": 4.2
+  },
+  {
+    "brand": "Ford",
+    "brand_image": "ford_logo.png",
     "car_name": "Ford Mustang",
     "car_image": "mustang.jpg",
     "body_type": "Sports Car",
@@ -30,18 +90,78 @@
     "rating": 4.8
   },
   {
-    "brand_name": "Chevrolet",
-    "brand_image": "https://i.ibb.co/1TNwnvh/Chevrolet-1.png",
+    "brand": "Ford",
+    "brand_image": "ford_logo.png",
+    "car_name": "Ford Explorer",
+    "car_image": "explorer.jpg",
+    "body_type": "SUV",
+    "price": "$34,000",
+    "short_description": "The Ford Explorer is a rugged and spacious SUV designed for adventure.",
+    "rating": 4.6
+  },
+  {
+    "brand": "Ford",
+    "brand_image": "ford_logo.png",
+    "car_name": "Ford Focus",
+    "car_image": "focus.jpg",
+    "body_type": "Hatchback",
+    "price": "$20,000",
+    "short_description": "The Ford Focus is a compact hatchback with nimble handling and modern features.",
+    "rating": 4.3
+  },
+  {
+    "brand": "Ford",
+    "brand_image": "ford_logo.png",
+    "car_name": "Ford Fusion",
+    "car_image": "fusion.jpg",
+    "body_type": "Sedan",
+    "price": "$28,000",
+    "short_description": "The Ford Fusion is a comfortable and stylish sedan with advanced technology.",
+    "rating": 4.2
+  },
+  {
+    "brand": "Chevrolet",
+    "brand_image": "chevrolet_logo.png",
     "car_name": "Chevrolet Corvette",
-    "car_image": "https://i.ibb.co/KwvLSK3/Chevrolet-car.jpg",
+    "car_image": "corvette.jpg",
     "body_type": "Sports Car",
     "price": "$60,000",
     "short_description": "The Chevrolet Corvette is a legendary sports car with stunning design and speed.",
     "rating": 4.7
   },
   {
-    "brand_name": "BMW",
-    "brand_image": "https://i.ibb.co/b3jW2DN/BMW.png",
+    "brand": "Chevrolet",
+    "brand_image": "chevrolet_logo.png",
+    "car_name": "Chevrolet Silverado",
+    "car_image": "silverado.jpg",
+    "body_type": "Truck",
+    "price": "$35,000",
+    "short_description": "The Chevrolet Silverado is a rugged and powerful pickup truck.",
+    "rating": 4.5
+  },
+  {
+    "brand": "Chevrolet",
+    "brand_image": "chevrolet_logo.png",
+    "car_name": "Chevrolet Equinox",
+    "car_image": "equinox.jpg",
+    "body_type": "SUV",
+    "price": "$29,000",
+    "short_description": "The Chevrolet Equinox is a versatile and comfortable SUV with modern features.",
+    "rating": 4.4
+  },
+  {
+    "brand": "Chevrolet",
+    "brand_image": "chevrolet_logo.png",
+    "car_name": "Chevrolet Malibu",
+    "car_image": "malibu.jpg",
+    "body_type": "Sedan",
+    "price": "$26,000",
+    "short_description": "The Chevrolet Malibu is a stylish and efficient sedan perfect for everyday driving.",
+    "rating": 4.3
+  },
+  {
+    "brand": "BMW",
+    "brand_image": "bmw_logo.png",
     "car_name": "BMW 3 Series",
     "car_image": "3_series.jpg",
     "body_type": "Sedan",
@@ -50,13 +170,73 @@
     "rating": 4.6
   },
   {
-    "brand_name": "Mercedes",
-    "brand_image": "https://i.ibb.co/fptGrZW/Mercedes-Benz-free-logo.png",
+    "brand": "BMW",
+    "brand_image": "bmw_logo.png",
+    "car_name": "BMW X5",
+    "car_image": "x5.jpg",
+    "body_type": "SUV",
+    "price": "$55,000",
+    "short_description": "The BMW X5 is a premium SUV that combines luxury with powerful performance.",
+    "rating": 4.7
+  },
+  {
+    "brand": "BMW",
+    "brand_image": "bmw_logo.png",
+    "car_name": "BMW i3",
+    "car_image": "i3.jpg",
+    "body_type": "Electric",
+    "price": "$45,000",
+    "short_description": "The BMW i3 is an innovative electric car with a sleek design and eco-friendly features.",
+    "rating": 4.5
+  },
+  {
+    "brand": "BMW",
+    "brand_image": "bmw_logo.png",
+    "car_name": "BMW 5 Series",
+    "car_image": "5_series.jpg",
+    "body_type": "Sedan",
+    "price": "$50,000",
+    "short_description": "The BMW 5 Series is a luxury sedan that offers a perfect blend of performance and elegance.",
+    "rating": 4.8
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "brand_image": "mercedes_logo.png",
     "car_name": "Mercedes-Benz C-Class",
     "car_image": "c_class.jpg",
     "body_type": "Sedan",
     "price": "$38,000",
     "short_description": "The Mercedes-Benz C-Class offers a blend of luxury and cutting-edge technology.",
     "rating": 4.9
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "brand_image": "mercedes_logo.png",
+    "car_name": "Mercedes-Benz GLC",
+    "car_image": "glc.jpg",
+    "body_type": "SUV",
+    "price": "$42,000",
+    "short_description": "The Mercedes-Benz GLC is a premium SUV with a perfect balance of style and functionality.",
+    "rating": 4.8
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "brand_image": "mercedes_logo.png",
+    "car_name": "Mercedes-Benz E-Class",
+    "car_image": "e_class.jpg",
+    "body_type": "Sedan",
+    "price": "$45,000",
+    "short_description": "The Mercedes-Benz E-Class is a luxurious sedan with advanced technology and superior comfort.",
+    "rating": 4.7
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "brand_image": "mercedes_logo.png",
+    "car_name": "Mercedes-Benz A-Class",
+    "car_image": "a_class.jpg",
+    "body_type": "Hatchback",
+    "price": "$32,000",
+    "short_description": "The Mercedes-Benz A-Class is a compact hatchback with premium features and exceptional performance.",
+    "rating": 4.6
   }
 ]

@@ -4,15 +4,15 @@ import { Authcontextprovider } from "../Context/Authcontext";
 import { Navigate } from "react-router-dom";
 
 const Priveteroute = ({ children }) => {
-  const { user } = useContext(Authcontextprovider);
+  const { user, isLoading } = useContext(Authcontextprovider);
+  
+  if (isLoading) {
+    return <span className="loading loading-infinity loading-lg"></span>;
+  }
   if (!user) {
-   return <Navigate to={"/login"} replace></Navigate>;
-  } 
-  return (
-    <div>
-      {children}
-    </div>
-  );
+    return <Navigate to={"/login"} replace></Navigate>;
+  }
+  return <div>{children}</div>;
 };
 
 Priveteroute.propTypes = {

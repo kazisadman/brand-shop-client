@@ -13,26 +13,28 @@ import Authcontext from "./Context/Authcontext";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Priveteroute from "./Private/Priveteroute";
+import Errorpage from "./Pages/Errorpage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Router></Router>,
+    errorElement: <Errorpage></Errorpage>,
     children: [
       {
-        path: "home",
+        path: "/home",
         element: <Home></Home>,
       },
       {
-        path: "login",
+        path: "/login",
         element: <Login></Login>,
       },
       {
-        path: "register",
+        path: "/register",
         element: <Register></Register>,
       },
       {
-        path: "addproduct",
+        path: "/addproduct",
         element: (
           <Priveteroute>
             <Addproduct></Addproduct>
@@ -57,10 +59,10 @@ const router = createBrowserRouter([
       {
         path: "/:brand/:name",
         element: <Productdetail></Productdetail>,
-        loader: () => fetch("/cars.json"),
+        loader: () => fetch("http://localhost:5000/cars"),
       },
       {
-        path: "cart",
+        path: "/cart",
         element: (
           <Priveteroute>
             <Cart></Cart>

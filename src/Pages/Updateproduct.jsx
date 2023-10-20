@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Updateproduct = () => {
   const carsData = useLoaderData();
+  const nav = useNavigate();
   const {
     _id,
     brand_name,
@@ -41,7 +42,10 @@ const Updateproduct = () => {
       body: JSON.stringify(updatedCar),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        nav("/home");
+      });
 
     console.log(updatedCar);
     e.target.reset();

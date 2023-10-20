@@ -5,7 +5,7 @@ const Brands = () => {
   const [brands, setBrands] = useState([]);
 
   useEffect(() => {
-    fetch("/brands.json")
+    fetch("https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/brand")
       .then((res) => res.json())
       .then((data) => setBrands(data));
   }, []);

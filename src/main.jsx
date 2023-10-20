@@ -49,17 +49,25 @@ const router = createBrowserRouter([
           </Priveteroute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cars/${params.id}`),
+          fetch(
+            `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars/${params.id}`
+          ),
       },
       {
         path: "/:brand",
         element: <Productspage></Productspage>,
-        loader: () => fetch("http://localhost:5000/cars"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars"
+          ),
       },
       {
         path: "/:brand/:name",
         element: <Productdetail></Productdetail>,
-        loader: () => fetch("http://localhost:5000/cars"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars"
+          ),
       },
       {
         path: "/cart",
@@ -68,7 +76,10 @@ const router = createBrowserRouter([
             <Cart></Cart>
           </Priveteroute>
         ),
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () =>
+          fetch(
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart"
+          ),
       },
     ],
   },

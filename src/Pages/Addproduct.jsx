@@ -19,13 +19,16 @@ const Addproduct = () => {
       rating,
     };
 
-    fetch("http://localhost:5000/cars", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newCar),
-    })
+    fetch(
+      "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newCar),
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
 

@@ -15,9 +15,12 @@ const Cartcard = ({ addedcar }) => {
 
   const handleCartDelet = () => {
     console.log(_id);
-    fetch(`http://localhost:5000/cart/${_id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart/${_id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => console.log(data));
   };

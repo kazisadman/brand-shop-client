@@ -34,13 +34,16 @@ const Updateproduct = () => {
       rating,
     };
 
-    fetch(`http://localhost:5000/cars/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedCar),
-    })
+    fetch(
+      `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedCar),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

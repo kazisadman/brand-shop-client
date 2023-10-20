@@ -1,5 +1,5 @@
-import {  useEffect, useState } from "react";
-import {  useLoaderData, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import { BiCar, BiStar } from "react-icons/bi";
 import { ImPriceTag } from "react-icons/im";
 
@@ -19,13 +19,16 @@ const Productdetail = () => {
   const handleCart = () => {
     const cartToast = document.getElementById("cart");
 
-    fetch("http://localhost:5000/cart", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(car),
-    })
+    fetch(
+      "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(car),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {

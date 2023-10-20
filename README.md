@@ -1,8 +1,17 @@
-# React + Vite
+# Brand Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Link - https://brand-shop-auth-d6238.web.app/home
 
-Currently, two official plugins are available:
+About Project-
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.This website has both email based and google authentication system.
+
+2.In this project 'car' can be added from 'Add product' page.
+
+3.Product info can be updated from 'Update product' page.
+
+4.Product can be added to the cart and can be seen on 'My cart' page.
+
+5.'Add product','My cart' and 'Update' pages are private route.It can only be accessed by signup.
+
+6.User name and image is displayed on the navbar.

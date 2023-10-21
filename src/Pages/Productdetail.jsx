@@ -20,7 +20,7 @@ const Productdetail = () => {
     const cartToast = document.getElementById("cart");
 
     fetch(
-      "https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cart",
+      "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart",
       {
         method: "POST",
         headers: {

@@ -17,7 +17,7 @@ const Cartcard = ({ addedcar }) => {
     console.log(_id);
 
     fetch(
-      `https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cart/${_id}`,
+      `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart/${_id}`,
 
       {
         method: "DELETE",

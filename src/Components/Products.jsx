@@ -13,7 +13,7 @@ const Products = ({ carsData }) => {
   console.log(exist);
 
   // useEffect(() => {
-  //   fetch("https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cars")
+  //   fetch("https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars")
   //     .then((res) => res.json())
   //     .then((data) => setCarsData(data));
   // }, []);

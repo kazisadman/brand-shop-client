@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cars/${params.id}`
+            `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars/${params.id}`
           ),
       },
       {
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <Productspage></Productspage>,
         loader: () =>
           fetch(
-            "https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cars"
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars"
           ),
       },
       {
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
         element: <Productdetail></Productdetail>,
         loader: () =>
           fetch(
-            "https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cars"
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars"
           ),
       },
       {
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
         ),
         loader: () =>
           fetch(
-            "https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cart"
+            "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart"
           ),
       },
     ],

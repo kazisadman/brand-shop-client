@@ -13,10 +13,12 @@ const Cartcard = ({ addedcar }) => {
     rating,
   } = addedcar;
 
-  const handleCartDelet = () => {
+  const handleCartDelet = (_id) => {
     console.log(_id);
+
     fetch(
-      `https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cart/${_id}`,
+      `https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cart/${_id}`,
+
       {
         method: "DELETE",
       }
@@ -49,7 +51,10 @@ const Cartcard = ({ addedcar }) => {
             </div>
           </div>
           <div className="card-actions justify-end">
-            <button onClick={handleCartDelet} className="btn btn-primary">
+            <button
+              onClick={() => handleCartDelet(_id)}
+              className="btn btn-primary"
+            >
               delete
             </button>
           </div>{" "}

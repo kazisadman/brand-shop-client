@@ -20,7 +20,7 @@ const Addproduct = () => {
     };
 
     fetch(
-      "https://brand-shop-iwmmrrtz6-sadman-nafes-projects.vercel.app/cars",
+      "https://brand-shop-d6kmeb6n0-sadman-nafes-projects.vercel.app/cars",
       {
         method: "POST",
         headers: {
